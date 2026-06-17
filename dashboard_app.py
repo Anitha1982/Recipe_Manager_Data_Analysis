@@ -8,9 +8,14 @@ st.set_page_config(layout="wide", page_title="Recipe Dataset Analysis")
 
 # --- 1. Load Data ---
 @st.cache_data
+from pathlib import Path
+import pandas as pd
+
+@st.cache_data
 def load_data():
     base_dir = Path(__file__).resolve().parent
-    csv_path = "Recipe_Dataset_Cleaned.csv"
+
+    csv_path = base_dir / "Recipe_Dataset_Cleaned.csv"
 
     print(csv_path)
     print(csv_path.exists())
@@ -20,6 +25,7 @@ def load_data():
     df['CreatedDate'] = pd.to_datetime(df['CreatedDate'])
     df['CreationYear'] = df['CreatedDate'].dt.year
     df['CreationMonth'] = df['CreatedDate'].dt.month_name()
+
     return df
 
 recipe_df = load_data()
