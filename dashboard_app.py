@@ -8,10 +8,6 @@ st.set_page_config(layout="wide", page_title="Recipe Dataset Analysis")
 
 # --- 1. Load Data ---
 @st.cache_data
-from pathlib import Path
-import pandas as pd
-
-@st.cache_data
 def load_data():
     base_dir = Path(__file__).resolve().parent
 
