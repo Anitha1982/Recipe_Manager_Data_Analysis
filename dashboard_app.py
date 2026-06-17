@@ -10,7 +10,7 @@ st.set_page_config(layout="wide", page_title="Recipe Dataset Analysis")
 @st.cache_data
 def load_data():
     base_dir = Path(__file__).resolve().parent
-    csv_path = "Recipe_Dataset.csv"
+    csv_path = "Recipe_Dataset_Cleaned.csv"
 
     print(csv_path)
     print(csv_path.exists())
