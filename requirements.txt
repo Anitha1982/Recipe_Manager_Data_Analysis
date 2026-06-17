@@ -4,7 +4,4 @@ numpy
 matplotlib
 seaborn
 plotly
-ydata-profiling
-sweetviz
-autoviz
 mysql-connector-python
